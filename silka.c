@@ -1,7 +1,11 @@
 #include <stdio.h>
+#include <string.h>
 int main(){
     // check if a number is even or odd
-    int number; 
+    int number;
+    char choice[10];
+    do{
+    
     printf("Enter any Number: ");
     scanf("%d", &number);
     if(number % 2 == 0){
@@ -9,5 +13,13 @@ int main(){
     } else {
         printf("%d odd number.", number);
     }
+     
+    printf("\nDo you want to check another number? (y/n): ");
+    scanf(" %s", &choice);
+
+
+
+   }while(strcmp(choice, "yes") == 0);
+   printf("Thank you for using the program.");
     return 0;
 }
